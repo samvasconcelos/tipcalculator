@@ -31,12 +31,20 @@ const reset = function () {
   valorConta = 0;
   valorFinal = 0;
   gorjeta = 0;
+  removeOutlineGorjeta();
   valorContaInput.value = "";
   valorContaInput.disabled = true;
   setTimeout(() => {
     valorContaInput.disabled = false;
   }, 1100);
 };
+
+// Remove o Outline dos Botões da Gorjeta
+function removeOutlineGorjeta() {
+  gorjeta10.classList.remove("outline");
+  gorjeta15.classList.remove("outline");
+  gorjeta20.classList.remove("outline");
+}
 
 // Tornar visível Modal Alerta de Erro
 function modalAlertaDisplay() {
@@ -49,11 +57,7 @@ function modalAlertaDisplay() {
 
 function selecionarGorjeta(btn) {
   console.log(`Gorjeta atual: ${gorjeta * 100}%\n`);
-
-  gorjeta10.classList.remove("outline");
-  gorjeta15.classList.remove("outline");
-  gorjeta20.classList.remove("outline");
-
+  removeOutlineGorjeta();
   btn.classList.add("outline");
 }
 
@@ -144,10 +148,8 @@ calcularBtn.addEventListener("click", function () {
   /* Checar se o valor da conta é numeral, ou um número negativo, 
   ou se contém vírgula ( , ) em vez de ponto ( . ) */
   checarValorConta();
-  console.log(valorConta, gorjeta);
 
   // Se gorjeta for = 0
-
   valorFinalSemGorjeta();
 
   // Se valor da Conta estiver OK e Gorjeta for maior que 0
