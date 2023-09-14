@@ -1,0 +1,339 @@
+@import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,500&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,200&display=swap");
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  position: relative;
+  margin: 0 auto;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+
+  text-align: center;
+}
+
+p,
+input,
+button {
+  font-family: "Poppins", Times, serif, sans-serif;
+  letter-spacing: 1px;
+  padding: 0.4rem;
+}
+
+/* ------- TYPOGRAPHY ------- */
+
+.title {
+  width: 35rem;
+  align-self: center;
+  text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.5),
+    -1px -1px 3px rgba(255, 255, 255, 0.5);
+}
+
+.valorConta {
+  text-align: center;
+  border-radius: 2rem;
+  border: 1px solid transparent;
+  width: 80%;
+  margin: 0 auto;
+
+  transition: 400ms;
+}
+
+.valorConta:focus {
+  outline: 1px solid #555;
+}
+
+.gorjetaText {
+  font-weight: 600;
+  letter-spacing: 0.3rem;
+  word-spacing: 0.5rem;
+}
+
+.result_text {
+  text-shadow: 2px 2px 6px #222222b4;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.result_gorj {
+  background-image: linear-gradient(
+    to bottom right,
+    rgb(255, 220, 21),
+    rgb(149, 128, 7)
+  );
+  text-shadow: 0 0 0 transparent;
+  font-weight: 800;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+/* ------- ICONE MODAL ------- */
+
+.icon img {
+  height: 2.7rem;
+  transform: translate(-5px, 5px);
+}
+
+/* ------- CONTAINER DADOS ------- */
+
+.container {
+  border-top-left-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+  background-color: transparent;
+
+  display: flex;
+  height: 45rem;
+  width: auto;
+}
+
+.container__dados {
+  /* Para fazer a animação depois */
+  z-index: 2;
+
+  border-top-left-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 3rem;
+  border-top-right-radius: 3rem;
+
+  display: flex;
+  height: 100%;
+  width: 65%;
+  flex-direction: column;
+  align-items: space-evenly;
+  justify-content: space-around;
+  padding: 4rem;
+  box-shadow: 0 10px 35px #333333a5;
+
+  /* PARA ANIMAÇÃO */
+  transform: translateX(30%);
+  transition: 800ms;
+
+  background: linear-gradient(
+    to top left,
+    rgb(233, 132, 152),
+    rgb(118, 152, 255)
+  );
+}
+
+/* ------- CONTAINER RESULTADOS ------- */
+
+.container__resultados {
+  /* Para fazer a animação depois */
+  z-index: 1;
+
+  border-bottom-right-radius: 3rem;
+  border-top-right-radius: 3rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: space-evenly;
+  justify-content: space-evenly;
+
+  background: linear-gradient(to top left, #ccc, white);
+  height: 100%;
+  padding: 5rem 3rem;
+  width: 35rem;
+  /* box-shadow: 0 10px 35px #333333a5; */
+
+  /* PARA ANIMAÇÃO */
+
+  transform: translateX(-60%);
+  transition: 800ms;
+}
+
+.container__valorC,
+.container__valorG,
+.container__valorF {
+  box-shadow: inset 0 0 20px #333;
+  width: 65%;
+  padding: 0.1rem;
+  border-radius: 1rem;
+  margin: 0 auto;
+  color: rgba(50, 77, 177, 0.644);
+  background-image: linear-gradient(
+    to bottom right,
+    rgb(138, 163, 255),
+    rgb(33, 63, 132)
+  );
+  text-shadow: 0 0 0 transparent;
+  font-weight: 800;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+/* ------- BUTTONS ------- */
+
+.container__btn {
+  display: flex;
+}
+
+.gorj_btn {
+  margin: 0 auto;
+  display: block;
+  width: 7rem;
+  color: #ccc;
+  height: 4rem;
+  border-radius: 2rem;
+  border: 1px solid transparent;
+  background-color: crimson;
+  font-weight: 500;
+  cursor: pointer;
+  box-shadow: inset 0 -10px 14px rgb(108, 2, 23);
+
+  transition: 400ms;
+}
+
+.gorj_btn:hover {
+  box-shadow: inset 0 -10px 14px rgb(108, 2, 23), 0 5px 5px #0000006e;
+  transform: translateY(-5px);
+}
+
+.gorj_btn:active {
+  box-shadow: inset 0 -10px 14px rgb(108, 2, 23), 0 5px 5px #0000006e;
+  transform: translateY(-2px) scale(0.95);
+}
+
+.outline {
+  outline: 5px solid crimson;
+}
+
+.gorj_btn:clicked {
+  box-shadow: 0 0 20px 20px blue;
+}
+
+.calcular_btn {
+  margin: 0 auto;
+  transform: scale(1.2);
+  cursor: pointer;
+  width: 14rem;
+  color: whitesmoke;
+  height: 4rem;
+  border-radius: 2rem;
+  border: 1px solid royalblue;
+  box-shadow: inset 0 -10px 14px rgb(7, 31, 104);
+  background: linear-gradient(
+    to bottom right,
+    royalblue,
+    rgb(151, 173, 239),
+    royalblue
+  );
+
+  transition: 400ms;
+}
+
+.calcular_btn:hover {
+  /* border: 2px solid rgb(11, 39, 124); */
+  transform: scale(1.2) translateY(-5px);
+  box-shadow: inset 0 -10px 14px rgb(11, 39, 124), 0 5px 5px #0000006e;
+}
+
+.calcular_btn:active {
+  transform: scale(1.15);
+}
+
+/* ----------- MODAL ---------- */
+
+.modal {
+  border-radius: 1rem;
+  border: 1px solid #777;
+  padding: 2rem;
+  background: linear-gradient(whitesmoke, #eee);
+  /* box-shadow: 0 0 3rem 0.2rem gold, inset 0 0 3rem 0.2rem #3333338f; */
+  /* box-shadow: 0 0 1rem 0.2rem #ccc, inset 0 0 1rem 0.2rem #9f9f9f8f; */
+  font-family: "Poppins", sans-serif;
+  position: absolute;
+  z-index: 3;
+  top: 5rem;
+  left: 50%;
+  transform: translateX(-50%);
+
+  transition: 300ms;
+}
+
+.modal__text {
+  font-weight: 300;
+  color: rgba(65, 105, 225, 0.597);
+  color: #555;
+}
+
+.modal__text span {
+  font-size: 1.6rem;
+}
+
+.hidden {
+  opacity: 0;
+}
+
+/* ----------- FOOTER ---------- */
+
+.copyright {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 10rem;
+  bottom: 0;
+  left: 0;
+  margin: 0 auto;
+}
+
+.copyright h3 {
+  font-size: 2rem;
+  color: #aaa;
+}
+
+/* ----------- MEDIA QUERY ---------- */
+
+@media screen and (max-width: 600px) {
+  body {
+    font-size: 1.5rem;
+  }
+  .valorConta {
+    font-size: 1rem;
+    width: 80%;
+    margin: 0 auto;
+  }
+  .container {
+    width: 38rem;
+  }
+  .container__dados {
+    padding: 1rem;
+  }
+
+  .container__resultados {
+    padding: 0;
+  }
+  .container__valorC,
+  .container__valorF,
+  .container__valorG {
+    width: 70%;
+    font-size: 1rem;
+    height: 3rem;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .copyright {
+    width: 100%;
+    height: 10rem;
+  }
+}

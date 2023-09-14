@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script type="module" defer src="script.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <title>Tip Calculator</title>
+  </head>
+  <body>
+    <!-- ALERT MODAL -->
+    <div class="modal hidden">
+      <h4 class="modal__text">
+        <span class="icon"
+          ><img src="./OOjs_UI_icon_alert-yellow.svg.png" alt=""
+        /></span>
+        <strong>ALERTA</strong> <br />
+        <span class="alerta_text"></span>
+      </h4>
+    </div>
+
+    <!-- MAIN CONTAINER -->
+    <div class="container">
+      <div class="container__dados">
+        <h1 class="title">Tip Calculator</h1>
+        <input
+          type="text"
+          class="valorConta"
+          placeholder="DIGITE O VALOR FINAL DA CONTA"
+        />
+        <p class="gorjetaText">Escolha a gorjeta</p>
+        <div class="container__btn">
+          <button class="gorj_btn gorjeta__10_btn">10%</button>
+          <button class="gorj_btn gorjeta__15_btn">15%</button>
+          <button class="gorj_btn gorjeta__20_btn">20%</button>
+        </div>
+        <button class="calcular_btn">Calcular</button>
+      </div>
+      <div class="container__resultados">
+        <p class="result_text">Valor Bruto</p>
+        <div class="container__valorC">
+          <h2 class="valorGorjeta">R$<span class="valorContaEl">OHEY</span></h2>
+        </div>
+        <p class="result_text result_gorj">Gorjeta</p>
+        <div class="container__valorG">
+          <h2 class="valorGorjeta">
+            R$<span class="valorGorjetaEl">OHEY</span>
+          </h2>
+        </div>
+        <p class="result_text">Valor Final</p>
+        <div class="container__valorF">
+          <h2 class="valorFinal">R$<span class="valorFinalEl">UAHA</span></h2>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="copyright">
+        <h3>
+          <p>
+            &copy; 2023 Samuel Vasconcelos. <br />
+            All Rights Reserved.
+          </p>
+        </h3>
+      </div>
+    </footer>
+  </body>
+</html>
