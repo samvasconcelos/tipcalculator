@@ -66,27 +66,27 @@ function checarValorConta() {
   // Se valor da conta incluir "," e "-"
   if (valorConta.includes(",") && valorConta.includes("-")) {
     alertaText.textContent =
-      "Utilize números positivos e ponto no lugar da vírgula, por favor!";
+      "Please, use positive numbers and a dot instead of coma!";
     modalAlertaDisplay();
   }
   // Se incluir "-"
   else if (valorConta.includes("-")) {
-    alertaText.textContent = "Digite um valor positivo, por favor";
+    alertaText.textContent = "Type a positive number, please!";
     modalAlertaDisplay();
   }
   // Se incluir ","
   else if (valorConta.includes(",")) {
-    alertaText.textContent = `Utilize um ponto ao invés de vírgula para as casas decimais!`;
+    alertaText.textContent = `Please, use a dot instead of coma for the decimals!`;
     modalAlertaDisplay();
   }
   // Se valor da conta não for um número
   if (isNaN(valorConta)) {
-    alertaText.textContent = "Valor digitado não é um número!";
+    alertaText.textContent = "Typed value is not a number!";
     modalAlertaDisplay();
   }
   // Se valor da conta estiver vazio
   else if (valorConta === "") {
-    alertaText.textContent = "Nenhum valor digitado!";
+    alertaText.textContent = "No value!";
     modalAlertaDisplay();
   }
 }
@@ -94,10 +94,10 @@ function checarValorConta() {
 // Display valor da conta sem Gorjeta
 function valorFinalSemGorjeta() {
   if (gorjeta === 0) {
-    console.log(`Gorjeta: 0%`);
+    console.log(`Tip: 0%`);
     valorFinal = Number(valorConta).toFixed(2);
-    console.log(`Valor da Gorjeta: R$0 reais`);
-    console.log(`Valor da Conta Final: R$${valorFinal} reais\n`);
+    console.log(`Tip : $0`);
+    console.log(`Final bill: $${valorFinal}\n`);
     valorFinalEl.textContent = valorFinal;
     valorContaEl.textContent = valorFinal;
   }
@@ -108,7 +108,7 @@ function valorFinalComGorjeta() {
   gorjeta *= Number(valorConta);
   gorjeta = gorjeta.toFixed(2);
   valorFinal = (Number(valorConta) + Number(gorjeta)).toFixed(2);
-  console.log(`Valor da Gorjeta: R$${gorjeta} reais`);
+  console.log(`Tip: $${gorjeta}`);
 }
 
 ////////////////////////////////////////////
@@ -143,7 +143,7 @@ calcularBtn.addEventListener("click", function () {
   containerResultados.style.boxShadow = `0 10px 35px #333333a5`;
 
   valorConta = valorContaInput.value;
-  console.log(`\nValor da Conta: R$${valorConta} reais`);
+  console.log(`\nBill value: $${valorConta}`);
 
   /* Checar se o valor da conta é numeral, ou um número negativo, 
   ou se contém vírgula ( , ) em vez de ponto ( . ) */
@@ -155,7 +155,7 @@ calcularBtn.addEventListener("click", function () {
   // Se valor da Conta estiver OK e Gorjeta for maior que 0
   valorFinalComGorjeta();
 
-  console.log(`Valor da Conta Final: R$${valorFinal} reais\n`);
+  console.log(`Final bill: $${valorFinal}\n`);
   valorContaEl.textContent = valorConta;
   valorGorjetaEl.textContent = gorjeta;
   valorFinalEl.textContent = valorFinal;
