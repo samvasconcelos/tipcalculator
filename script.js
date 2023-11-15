@@ -4,18 +4,18 @@
 const containerDados = document.querySelector(".container__dados");
 const containerResultados = document.querySelector(".container__resultados");
 
-const valorContaInput = document.querySelector(".valorConta");
+const valorContaInput = document.querySelector(".valor-conta");
 let valorConta = "";
-const gorjeta10 = document.querySelector(".gorjeta__10_btn");
-const gorjeta15 = document.querySelector(".gorjeta__15_btn");
-const gorjeta20 = document.querySelector(".gorjeta__20_btn");
-const calcularBtn = document.querySelector(".calcular_btn");
-const alertaText = document.querySelector(".alerta_text");
+const gorjeta10 = document.querySelector(".gorjeta-10-btn");
+const gorjeta15 = document.querySelector(".gorjeta-15-btn");
+const gorjeta20 = document.querySelector(".gorjeta-20-btn");
+const calcularBtn = document.querySelector(".calcular-btn");
+const alertaText = document.querySelector(".alerta-text");
 
 // RESULTADOS VISIVEIS NA TELA
-const valorGorjetaEl = document.querySelector(".valorGorjetaEl");
-const valorFinalEl = document.querySelector(".valorFinalEl");
-const valorContaEl = document.querySelector(".valorContaEl");
+const valorGorjetaEl = document.querySelector(".valor-gorjetaEl");
+const valorFinalEl = document.querySelector(".valor-finalEl");
+const valorContaEl = document.querySelector(".valor-contaEl");
 
 let valorFinal = "";
 const modal = document.querySelector(".modal");
